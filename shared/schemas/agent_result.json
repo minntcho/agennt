@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentResult",
+  "type": "object",
+  "required": ["package", "task", "status", "message"],
+  "properties": {
+    "package": {"type": "string"},
+    "task": {"type": "string"},
+    "status": {"type": "string", "enum": ["ok", "error"]},
+    "message": {"type": "string"}
+  }
+}
