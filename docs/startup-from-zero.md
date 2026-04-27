@@ -1,48 +1,48 @@
 # Startup From Zero: Ecommerce AI Ops
 
-## Concept
+## 컨셉
 
-This scenario starts from a founder's problem hypothesis, not from a finished agent architecture.
+이 시나리오는 완성된 agent 아키텍처에서 출발하지 않습니다. 출발점은 창업자의 문제 가설입니다.
 
-The company does not exist in order to use agents. The company begins because a founder notices a real operational problem, then agents become useful as the company creates research, messaging, product operations, support, internal tasks, incidents, security reviews, and evaluation artifacts.
+회사는 agent를 쓰기 위해 존재하지 않습니다. 회사는 창업자가 실제 운영 문제를 발견하면서 시작됩니다. 이후 리서치, 메시징, 제품 운영, 고객 지원, 내부 업무, 장애 대응, 보안 점검, 평가 artifact가 생기고, 그 과정에서 agent들이 유용해집니다.
 
-The scenario is:
-
-```text
-founder problem hypothesis
--> market validation
--> launch messaging
--> MVP scope
--> first customer inquiry
--> beta onboarding
--> operational incident
--> security review
--> experiment evaluation
-```
-
-## Company premise
-
-A founder wants to build an AI operations assistant for small ecommerce sellers.
-
-The initial thesis:
+전체 흐름은 다음입니다.
 
 ```text
-Small ecommerce sellers spend too much time handling repetitive product operations: reading reviews, answering customer messages, tracking refunds, writing product copy, and reacting to operational issues.
-
-An AI assistant could help by turning scattered operational signals into structured summaries, drafts, warnings, and internal tasks.
+창업자 문제 가설
+-> 시장 검증
+-> 출시 메시지
+-> MVP 범위
+-> 첫 고객 문의
+-> 베타 온보딩
+-> 운영 장애
+-> 보안 점검
+-> 실험 평가
 ```
 
-The company starts with a thesis, not a product.
+## 회사 전제
 
-## First artifact: founder thesis
+창업자는 작은 이커머스 셀러를 위한 AI 운영 보조 SaaS를 만들고 싶어합니다.
 
-File idea:
+초기 가설은 다음입니다.
+
+```text
+작은 이커머스 셀러들은 리뷰 읽기, 고객 메시지 응답, 환불 추적, 상품 카피 작성, 운영 이슈 대응 같은 반복 업무에 너무 많은 시간을 쓴다.
+
+AI assistant는 흩어진 운영 신호를 구조화된 요약, 초안, 경고, 내부 업무로 바꿔 이 문제를 줄일 수 있다.
+```
+
+이 회사는 제품이 아니라 thesis에서 시작합니다.
+
+## 첫 artifact: founder thesis
+
+파일 아이디어:
 
 ```text
 founder_thesis.md
 ```
 
-Example:
+예시:
 
 ```md
 # Founder Thesis
@@ -64,17 +64,17 @@ If we provide an AI assistant that summarizes reviews, drafts support replies, a
 An AI-powered ecommerce operations assistant.
 ```
 
-This thesis becomes the root input for the first agent tasks.
+이 thesis가 첫 agent 작업의 루트 입력이 됩니다.
 
 ---
 
-## Stage 1: Validate the problem
+## Stage 1: 문제가 실제인지 검증하기
 
 ### Client request
 
 ```text
-We think small ecommerce sellers struggle with repetitive operations.
-Research whether this problem is real, what pains are common, and what questions we should investigate next.
+우리는 작은 이커머스 셀러들이 반복 운영 업무에 시달린다고 보고 있다.
+이 문제가 실제로 존재하는지, 어떤 pain이 흔한지, 다음에 조사해야 할 질문이 무엇인지 조사해줘.
 ```
 
 ### Agent
@@ -112,17 +112,17 @@ market_research_brief.json
 
 ### Learning target
 
-Practice turning a broad founder thesis into a structured research brief.
+넓은 창업자 가설을 구조화된 research brief로 바꾸는 연습입니다.
 
 ---
 
-## Stage 2: Create the first market-facing message
+## Stage 2: 첫 시장-facing 메시지 만들기
 
 ### Client request
 
 ```text
-Use the research brief to create landing page copy and cold email drafts.
-The product is not finished yet. The goal is to get interviews and beta signups.
+research brief를 바탕으로 landing page copy와 cold email draft를 만들어줘.
+제품은 아직 완성되지 않았고, 목표는 인터뷰와 베타 신청을 받는 것이다.
 ```
 
 ### Agent
@@ -153,17 +153,17 @@ launch_messaging.json
 
 ### Learning target
 
-Practice converting research output into useful messaging without pretending the product is already mature.
+리서치 결과를 제품이 성숙한 척하지 않는 유용한 메시지로 바꾸는 연습입니다.
 
 ---
 
-## Stage 3: Choose the MVP scope
+## Stage 3: MVP 범위 정하기
 
 ### Client request
 
 ```text
-We cannot build everything at once.
-Given review analysis, support reply drafting, inventory warnings, and product copy generation, recommend the first MVP scope.
+우리는 모든 기능을 한 번에 만들 수 없다.
+리뷰 분석, 고객 응답 초안, 재고 경고, 상품 카피 생성 중에서 첫 MVP 범위를 추천해줘.
 ```
 
 ### Agent
@@ -198,17 +198,17 @@ mvp_scope.json
 
 ### Learning target
 
-Practice scope control: the first product should solve one painful workflow before pretending to be a full operating system.
+범위 통제 연습입니다. 첫 제품은 전체 운영체제인 척하기보다, 하나의 아픈 workflow를 먼저 해결해야 합니다.
 
 ---
 
-## Stage 4: Handle the first customer inquiry
+## Stage 4: 첫 고객 문의 처리하기
 
 ### Client request
 
 ```text
-A store owner saw the beta page and asked whether the tool can help with reviews and refund questions.
-Classify the inquiry and draft a response. Since this may be an early lead, flag whether the founder should review it personally.
+한 스토어 운영자가 베타 페이지를 보고, 이 도구가 리뷰와 환불 문의에 도움을 줄 수 있는지 물었다.
+문의 유형을 분류하고 응답 초안을 만들어줘. 초기 리드일 수 있으니 창업자가 직접 검토해야 하는지도 표시해줘.
 ```
 
 ### Agent
@@ -237,17 +237,17 @@ lead_support_reply.json
 
 ### Learning target
 
-Practice customer-message classification, reply drafting, and escalation judgement.
+고객 메시지 분류, 응답 초안 작성, escalation 판단을 연습합니다.
 
 ---
 
-## Stage 5: Create beta onboarding work
+## Stage 5: 베타 온보딩 업무 만들기
 
 ### Client request
 
 ```text
-The first beta customer is interested.
-Create an internal onboarding ticket that lists what information we need before we can process their store data.
+첫 베타 고객이 관심을 보였다.
+고객의 store data를 처리하기 전에 어떤 정보가 필요한지 내부 onboarding ticket으로 정리해줘.
 ```
 
 ### Agent
@@ -285,17 +285,17 @@ beta_onboarding_ticket.json
 
 ### Learning target
 
-Practice converting customer interest into structured internal work.
+고객 관심을 구조화된 내부 업무로 바꾸는 연습입니다.
 
 ---
 
-## Stage 6: Triage the first operational incident
+## Stage 6: 첫 운영 장애 triage하기
 
 ### Client request
 
 ```text
-A beta customer uploaded a review CSV, but the analysis result did not appear.
-Given the incident description and logs, identify likely causes and safe next checks.
+베타 고객이 review CSV를 업로드했는데 분석 결과가 나오지 않았다.
+장애 설명과 로그를 바탕으로 가능한 원인과 안전한 다음 점검 항목을 제안해줘.
 ```
 
 ### Agent
@@ -336,16 +336,17 @@ csv_import_incident_triage.json
 
 ### Learning target
 
-Practice incident triage without jumping directly to risky production actions.
+위험한 production action으로 바로 뛰지 않고 장애를 triage하는 연습입니다.
 
 ---
 
-## Stage 7: Review early security concerns
+## Stage 7: 초기 보안 우려 점검하기
 
 ### Client request
 
 ```text
-Now that beta customer data exists, review suspicious admin login failures and identify defensive checks we should perform.
+이제 베타 고객 데이터가 생겼다.
+관리자 로그인 실패가 반복된 기록을 검토하고, 우리가 수행해야 할 방어적 점검 항목을 정리해줘.
 ```
 
 ### Agent
@@ -381,17 +382,17 @@ security_review_ticket.json
 
 ### Learning target
 
-Practice defensive security triage and safe review planning.
+방어적 보안 triage와 안전한 점검 계획을 연습합니다.
 
 ---
 
-## Stage 8: Evaluate the simulation
+## Stage 8: 시뮬레이션 평가하기
 
 ### Client request
 
 ```text
-Review the outputs from this startup scenario.
-Score what worked, what was weak, and what each agent should improve in the next iteration.
+이번 startup scenario에서 나온 산출물들을 검토해줘.
+무엇이 잘 됐고, 무엇이 약했으며, 각 agent가 다음 iteration에서 무엇을 개선해야 하는지 평가해줘.
 ```
 
 ### Agent
@@ -435,11 +436,11 @@ startup_simulation_eval.json
 
 ### Learning target
 
-Practice comparing agent outputs as experiment artifacts instead of treating each exercise as isolated.
+각 연습을 고립된 과제로 끝내지 않고, agent 산출물을 실험 artifact로 비교하는 연습입니다.
 
 ---
 
-## Full artifact chain
+## 전체 artifact chain
 
 ```text
 founder_thesis.md
@@ -453,30 +454,32 @@ founder_thesis.md
 -> startup_simulation_eval.json
 ```
 
-## Design principle
+## 설계 원칙
 
-The company story should drive the agent tasks.
+회사 이야기가 agent 작업을 이끌어야 합니다.
 
-Do not start from:
-
-```text
-I need to build an agent, so I need a fake problem.
-```
-
-Start from:
+이렇게 시작하지 않습니다.
 
 ```text
-A founder has a problem hypothesis. The company creates work. Agents help handle that work.
+agent를 만들어야 하니까 가짜 문제를 찾는다.
 ```
 
-This keeps the practice grounded, sequential, and easier to expand.
+이렇게 시작합니다.
 
-## Non-goals for this scenario
+```text
+창업자에게 문제 가설이 있다.
+회사가 생기면서 일이 생긴다.
+agent가 그 일을 돕는다.
+```
 
-- No real customer data.
-- No real external side effects.
-- No automatic refunds, deployments, or security actions.
-- No central orchestrator required for the first version.
-- No assumption that all packages must be implemented before learning can start.
+이 방식은 연습을 더 구체적이고, 순차적이고, 확장 가능하게 만듭니다.
 
-The first implementation can begin with only the founder thesis and `research-agent`.
+## 이 시나리오의 non-goals
+
+- 실제 고객 데이터 없음.
+- 실제 외부 side effect 없음.
+- 자동 환불, 자동 배포, 자동 보안 조치 없음.
+- 첫 버전에서 중앙 orchestrator는 필수가 아님.
+- 모든 패키지를 구현해야만 학습을 시작할 수 있다는 가정 없음.
+
+첫 구현은 `founder_thesis`와 `research-agent`만으로 시작할 수 있습니다.
