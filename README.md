@@ -49,6 +49,7 @@ agent -> artifact -> 다른 agent가 artifact를 읽음
 ## Quick start
 
 ```bash
+python -m pip install -r requirements-dev.txt
 make test
 make run PKG=cs-agent
 ```
