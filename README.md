@@ -50,6 +50,6 @@ agent -> artifact -> 다른 agent가 artifact를 읽음
 
 ```bash
 python -m pip install -r requirements-dev.txt
-make test
+python -m pytest -q
 make run PKG=cs-agent
 ```
