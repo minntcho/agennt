@@ -1,10 +1,12 @@
 # ecommerce-agent
 
-## Purpose
-Domain-focused practice package for the **ecommerce-agent** workflow.
+## 목적
 
-## Interface
-All packages expose the same interface:
+`ecommerce-agent` workflow를 연습하기 위한 도메인 중심 패키지입니다.
+
+## 인터페이스
+
+모든 패키지는 같은 인터페이스를 노출합니다.
 
 ```python
 from ecommerce_agent import run
@@ -12,7 +14,8 @@ from ecommerce_agent import run
 result = run({"task": "example"})
 ```
 
-## Run
+## 실행
+
 ```bash
 PYTHONPATH=packages/ecommerce-agent/src python -c "from ecommerce_agent import run; print(run({'task':'demo'}))"
 ```
