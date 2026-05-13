@@ -1,6 +1,6 @@
 # agennt
 
-`agennt`는 agent 시스템을 **도메인별 독립 패키지**로 연습하기 위한 레포입니다.
+`agennt`는 agent 시스템을 **문제 케이스별 scenario**와 **도메인별 독립 패키지**로 연습하기 위한 레포입니다.
 
 ## 언어 원칙
 
@@ -10,21 +10,21 @@
 
 ## 방향
 
-`agennt`는 하나의 거대한 공통 런타임을 먼저 만드는 레포가 아닙니다.
+`agennt`는 하나의 거대한 공통 런타임을 먼저 만드는 레포가 아닙니다. 또한 특정 스타트업 사례 하나만 구현하는 레포도 아닙니다.
 
-각 패키지는 독립적으로 실행 가능한 연습 단위로 유지하되, 패키지들이 만든 산출물이 서로의 입력이 되는 작은 **agent 생태계**로 키우는 것이 목표입니다.
+여러 문제 케이스를 `scenarios/*` 아래에 두고, 각 scenario가 재사용 가능한 `packages/*` agent들을 조합해 artifact chain을 만드는 것이 목표입니다.
 
 핵심 규칙은 다음입니다.
 
 ```text
-agent -> artifact -> 다른 agent가 artifact를 읽음
+scenario -> agent -> artifact -> 다음 agent
 ```
 
 즉, agent끼리 서로 내부 함수를 직접 import해서 호출하는 방식보다, 명시적인 산출물을 남기고 그 산출물을 다음 agent가 읽는 방식을 우선합니다.
 
-## 첫 시나리오
+## 첫 예시 scenario
 
-첫 세계관은 **Startup From Zero: Ecommerce AI Ops**입니다.
+첫 예시 케이스는 **Startup From Zero: Ecommerce AI Ops**입니다.
 
 완성된 agent 구조에서 시작하지 않고, 창업자의 문제 가설에서 시작합니다. 작은 이커머스 셀러들이 반복 운영 업무에 시달린다는 문제를 발견하고, 이를 해결하는 AI 운영 보조 SaaS를 만든다고 가정합니다.
 
@@ -42,15 +42,18 @@ agent -> artifact -> 다른 agent가 artifact를 읽음
 -> 실험 평가
 ```
 
-전체 시나리오는 `docs/startup-from-zero.md`에 정리되어 있습니다.
+전체 시나리오 설명은 `docs/startup-from-zero.md`에 있고, scenario 디렉토리 설계는 `docs/scenario-structure.md`에 정리되어 있습니다.
 
 ## 구조
 
+- `scenarios/*`: 문제 케이스별 입력, 실행 흐름, 기대 artifact를 두는 위치입니다.
 - `packages/*`: 도메인별 agent 패키지. 공통 인터페이스는 `run(input_data) -> dict`입니다.
+- `workspace/*`: scenario 실행 결과 artifact를 저장하는 로컬 작업 공간입니다. 생성물은 기본적으로 커밋하지 않습니다.
 - `shared/*`: 공유 schema, prompt, utility helper를 두는 위치입니다.
 - `docs/architecture.md`: 전체 아키텍처와 기본 규칙입니다.
 - `docs/ecosystem-architecture.md`: artifact 기반 agent 생태계 방향입니다.
-- `docs/startup-from-zero.md`: 첫 클라이언트/창업자 주도 시나리오입니다.
+- `docs/scenario-structure.md`: 문제 케이스별 scenario 구조입니다.
+- `docs/startup-from-zero.md`: 첫 예시 scenario의 상세 설명입니다.
 
 ## Quick start
 
