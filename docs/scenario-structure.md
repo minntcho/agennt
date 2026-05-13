@@ -18,6 +18,21 @@ scenario -> agent package -> artifact -> 다음 agent package
 - 실행 결과는 레포에 커밋하지 않고 `workspace/artifacts/<scenario-name>/` 아래에 생성합니다.
 - 첫 구현은 deterministic demo여도 괜찮지만, PR 설명에서 실제 agent 동작과 구분합니다.
 
+## 실험 공간으로서의 scenario
+
+`scenarios/*`는 문제 케이스별 샌드박스입니다. 새 문제, 세계관, 입력 artifact, 실행 흐름, 기대 출력은 이 안에서 비교적 자유롭게 추가하고 바꿀 수 있습니다.
+
+`workspace/artifacts/<scenario-name>/`는 해당 scenario를 실행하며 나온 결과를 쌓는 로컬 샌드박스입니다. 이 출력은 학습과 비교를 위한 실행 결과이며 기본적으로 커밋하지 않습니다.
+
+반대로 `packages/*`와 `shared/*`는 여러 scenario가 함께 쓰는 영역입니다. 이 영역을 바꿀 때는 새 scenario 하나만이 아니라 기존 scenario와 공통 계약에 미치는 영향을 확인합니다.
+
+```text
+scenarios/* = 과감한 문제 케이스 실험
+workspace/* = 로컬 실행 결과 샌드박스
+packages/*  = 재사용 가능한 agent 계약
+shared/*    = 공통 schema와 helper 계약
+```
+
 ## 권장 디렉토리 구조
 
 ```text
