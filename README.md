@@ -44,6 +44,8 @@ scenario -> agent -> artifact -> 다음 agent
 
 전체 시나리오 설명은 `docs/startup-from-zero.md`에 있고, scenario 디렉토리 설계는 `docs/scenario-structure.md`에 정리되어 있습니다.
 
+첫 scenario 디렉토리는 `scenarios/startup-ecommerce-ai-ops/`에 있습니다.
+
 ## 구조
 
 - `scenarios/*`: 문제 케이스별 입력, 실행 흐름, 기대 artifact를 두는 위치입니다.
