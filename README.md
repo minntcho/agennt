@@ -45,6 +45,7 @@ agent -> artifact -> 다른 agent가 artifact를 읽음
 - `docs/architecture.md`: 전체 아키텍처와 기본 규칙입니다.
 - `docs/ecosystem-architecture.md`: artifact 기반 agent 생태계 방향입니다.
 - `docs/startup-from-zero.md`: 첫 클라이언트/창업자 주도 시나리오입니다.
+- `examples/startup-from-zero/founder_thesis.md`: 3단계 데모의 시작 입력입니다.
 
 ## Quick start
 
@@ -52,4 +53,13 @@ agent -> artifact -> 다른 agent가 artifact를 읽음
 python -m pip install -r requirements-dev.txt
 python -m pytest -q
 make run PKG=cs-agent
+make demo-startup
+```
+
+`make demo-startup`은 `founder_thesis.md`를 읽고 다음 artifact를 만듭니다.
+
+```text
+market_research_brief.json
+-> launch_messaging.json
+-> mvp_scope.json
 ```

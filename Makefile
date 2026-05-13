@@ -2,7 +2,7 @@ PYTHON ?= python3
 PKG ?= cs-agent
 MOD := $(subst -,_,$(PKG))
 
-.PHONY: run test test-all lint
+.PHONY: run test test-all lint demo-startup
 
 run:
 	PYTHONPATH=packages/$(PKG)/src $(PYTHON) -c "from $(MOD) import run; print(run({'task':'demo'}))"
@@ -21,4 +21,7 @@ test-all:
 	done
 
 lint:
-	$(PYTHON) -m compileall -q packages shared
+	$(PYTHON) -m compileall -q packages shared scripts
+
+demo-startup:
+	$(PYTHON) scripts/run_startup_demo.py
