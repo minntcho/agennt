@@ -26,6 +26,18 @@ scenario -> agent -> artifact -> 다음 agent
 - scenario 통합 테스트는 특정 agent 패키지 내부보다 `tests/scenarios/` 또는 `scenarios/<scenario-name>/tests/`에 두는 것을 선호합니다.
 - deterministic demo와 실제 agent 동작을 PR 설명에서 구분합니다.
 
+## 실험 범위
+
+`scenarios/*`는 문제 케이스별 실험 공간입니다. 새 케이스, 입력 artifact, 실행 흐름, 기대 출력은 이 안에서 비교적 자유롭게 추가하고 바꿀 수 있습니다.
+
+`workspace/*`는 실행 결과를 쌓는 로컬 샌드박스이며 기본적으로 커밋하지 않습니다.
+
+`packages/*`는 여러 scenario가 재사용하는 도메인 agent 영역입니다. 변경할 때는 기존 scenario와 공통 인터페이스인 `run(input_data: dict) -> dict`에 미치는 영향을 확인합니다.
+
+`shared/*`는 공통 계약을 담는 영역입니다. 여러 scenario와 package에 영향을 줄 수 있으므로 변경 의도를 PR 설명에 분명히 남깁니다.
+
+요약하면, 시나리오는 과감하게 실험하고 패키지와 shared는 재사용 계약을 의식합니다.
+
 ## 작업 방식
 
 - 작은 PR을 선호합니다.
