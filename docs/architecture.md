@@ -38,6 +38,12 @@ scenario 실행 결과를 저장하는 로컬 작업 공간입니다. 생성된 
 
 공유 schema, prompt, artifact IO helper, utility helper를 둘 수 있는 위치입니다.
 
+## 실험 범위
+
+`scenarios/*`와 `workspace/*`는 케이스별 실험 자유도가 높은 공간입니다. 새 문제 케이스, 입력 artifact, 실행 흐름, 기대 출력, 로컬 실행 결과는 이 범위에서 과감하게 시도할 수 있습니다.
+
+`packages/*`와 `shared/*`는 여러 scenario가 함께 쓰는 재사용 영역입니다. 이 영역을 바꿀 때는 공통 인터페이스, artifact 계약, 기존 scenario에 미치는 영향을 확인합니다.
+
 ## 도메인 패키지
 
 - `research-agent`: 넓은 주제를 구조화된 리서치 브리프로 바꿉니다.
