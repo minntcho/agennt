@@ -1,11 +1,11 @@
 {
   "name": "startup-ecommerce-ai-ops",
   "title": "Startup From Zero: Ecommerce AI Ops",
-  "entry_artifact": "founder_thesis.md",
+  "entry_artifact": "client_request.md",
   "steps": [
     {
       "agent": "research-agent",
-      "input": "founder_thesis.md",
+      "input": "client_request.md",
       "output": "market_research_brief.json"
     },
     {
