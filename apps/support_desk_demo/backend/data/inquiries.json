@@ -1,0 +1,41 @@
+[
+  {
+    "id": "inq-1001",
+    "customer_name": "Mina Park",
+    "channel": "email",
+    "subject": "사이즈가 달라서 환불하고 싶어요",
+    "message": "지난주에 산 린넨 셔츠가 상세 페이지의 사이즈표보다 작게 느껴집니다. 이미 택은 제거했는데 환불이 가능한지 알고 싶습니다.",
+    "order_id": "ORD-1001",
+    "product_name": "linen shirt",
+    "status": "new",
+    "received_at": "2026-05-13T09:10:00+09:00",
+    "tags": ["refund", "size_mismatch"],
+    "customer_sentiment": "frustrated"
+  },
+  {
+    "id": "inq-1002",
+    "customer_name": "Joon Lee",
+    "channel": "chat",
+    "subject": "배송이 아직 안 움직입니다",
+    "message": "주문한 지 5일이 지났는데 배송 조회가 계속 집하 상태입니다. 언제 받을 수 있나요?",
+    "order_id": "ORD-1002",
+    "product_name": "ceramic mug set",
+    "status": "new",
+    "received_at": "2026-05-13T10:25:00+09:00",
+    "tags": ["shipping"],
+    "customer_sentiment": "worried"
+  },
+  {
+    "id": "inq-1003",
+    "customer_name": "Sara Kim",
+    "channel": "review",
+    "subject": "향은 좋은데 뚜껑이 헐거워요",
+    "message": "캔들 향은 만족스럽지만 뚜껑이 헐거워서 선물용으로는 조금 아쉽습니다. 다른 사람들도 같은 문제를 겪는지 궁금합니다.",
+    "order_id": "ORD-1003",
+    "product_name": "soy candle",
+    "status": "needs_review",
+    "received_at": "2026-05-13T11:40:00+09:00",
+    "tags": ["review", "product_quality"],
+    "customer_sentiment": "mixed"
+  }
+]
