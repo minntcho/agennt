@@ -39,7 +39,7 @@ shared/*    = 공통 schema와 helper 계약
 scenarios/
   startup-ecommerce-ai-ops/
     README.md
-    founder_thesis.md
+    client_request.md
     scenario.json
     expected/
       market_research_brief.json
@@ -67,11 +67,11 @@ workspace/
 ```json
 {
   "name": "startup-ecommerce-ai-ops",
-  "entry_artifact": "founder_thesis.md",
+  "entry_artifact": "client_request.md",
   "steps": [
     {
       "agent": "research-agent",
-      "input": "founder_thesis.md",
+      "input": "client_request.md",
       "output": "market_research_brief.json"
     },
     {
@@ -101,6 +101,8 @@ workspace/
 
 현재 첫 예시 케이스는 `Startup From Zero: Ecommerce AI Ops`입니다.
 
-이 케이스는 작은 이커머스 셀러를 위한 AI 운영 보조 SaaS를 가정하고, 창업자 문제 가설에서 시작해 시장 조사, 출시 메시지, MVP 범위, 고객 문의, 운영 업무, 장애 대응, 보안 점검, 평가 artifact로 확장됩니다.
+이 케이스는 작은 이커머스 셀러를 위한 AI 운영 보조 SaaS를 가정하고, 가상의 외부 클라이언트 요청서에서 시작합니다. 요청서 안에는 창업자의 문제 가설, 아직 검증되지 않은 불확실성, 원하는 산출물이 함께 들어 있습니다.
+
+그 요청은 시장 조사, 출시 메시지, MVP 범위, 고객 문의, 운영 업무, 장애 대응, 보안 점검, 평가 artifact로 확장됩니다.
 
 중요한 점은 이 케이스가 레포 전체의 고정 세계관이 아니라, `scenarios/*` 아래에 들어갈 첫 예시라는 것입니다.
