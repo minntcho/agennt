@@ -50,6 +50,7 @@ scenario -> agent -> artifact -> 다음 agent
 
 ## 구조
 
+- `apps/*`: agent가 붙을 실제 제품 표면을 두는 위치입니다.
 - `scenarios/*`: 문제 케이스별 입력, 실행 흐름, 기대 artifact를 두는 위치입니다.
 - `packages/*`: 도메인별 agent 패키지. 공통 인터페이스는 `run(input_data) -> dict`입니다.
 - `workspace/*`: scenario 실행 결과 artifact를 저장하는 로컬 작업 공간입니다. 생성물은 기본적으로 커밋하지 않습니다.
@@ -65,4 +66,5 @@ scenario -> agent -> artifact -> 다음 agent
 python -m pip install -r requirements-dev.txt
 python -m pytest -q
 make run PKG=cs-agent
+make support-desk-api
 ```
